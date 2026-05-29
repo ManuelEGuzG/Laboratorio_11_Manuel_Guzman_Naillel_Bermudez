@@ -47,6 +47,7 @@ jobs:
       - name: Ejecutar migraciones sobre MySQL de prueba
         env:
           APP_ENV: testing
+          APP_SECRET: ${{ secrets.APP_SECRET_KEY }}
           DB_CONNECTION: mysql
           DB_HOST: 127.0.0.1
           DB_PORT: 3306
@@ -58,6 +59,7 @@ jobs:
       - name: Ejecutar pruebas PHPUnit
         env:
           APP_ENV: testing
+          APP_SECRET: ${{ secrets.APP_SECRET_KEY }}
           DB_CONNECTION: mysql
           DB_HOST: 127.0.0.1
           DB_PORT: 3306
