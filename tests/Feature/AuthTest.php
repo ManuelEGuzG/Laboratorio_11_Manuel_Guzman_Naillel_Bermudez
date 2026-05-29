@@ -13,7 +13,7 @@ class AuthTest extends TestCase
     {
         $response = $this->postJson('/api/v1/auth/login', []);
 
-        $response->assertStatus(200); // ← mal a propósito, debería ser 422
+        $response->assertStatus(422); // ← correcto ahora
     }
 
     public function test_login_con_credenciales_invalidas(): void
